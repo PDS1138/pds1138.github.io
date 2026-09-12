@@ -48,8 +48,8 @@
 
   <div class="panel"><h2><span class="num">2.</span>Two Distinct Verification Paths</h2><div class="kicker">Pilot-in-the-loop FMET was separate from BIT verification</div>
     <div class="parallel">
-      <div class="track fmet"><h4>FMET — Pilot in the Loop</h4><div class="stepstack"><div class="sbox hot">Inject fault condition</div><div class="down">↓</div><div class="sbox">Operate integrated flight-control system</div><div class="down">↓</div><div class="sbox good">Evaluate system behavior under fault</div></div></div>
       <div class="track bit"><h4>BIT Verification — No Pilot</h4><div class="stepstack"><div class="sbox hot">Inject hardware failure</div><div class="down">↓</div><div class="sbox">Execute Built-In Test</div><div class="down">↓</div><div class="sbox good">Evaluate detection &amp; isolation</div></div></div>
+      <div class="track fmet"><h4>FMET — Pilot in the Loop</h4><div class="stepstack"><div class="sbox">Pilot flies simulator while connected to flight control system, simulator, and iron bird</div><div class="down">↓</div><div class="sbox hot">Inject fault condition</div><div class="down">↓</div><div class="sbox good">Evaluate system behavior under fault</div></div></div>
     </div>
   </div>
 
@@ -64,7 +64,7 @@
   </div>
 </section>
 
-<section class="results"><h3>◎ &nbsp; RESULT</h3><div class="resgrid"><div class="res"><strong>FMET procedures</strong><span>Developed structured failure-mode verification procedures for the JAS-39 flight-control system.</span></div><div class="res"><strong>Integrated testing</strong><span>Executed pilot-in-the-loop tests under injected fault conditions in Sweden.</span></div><div class="res"><strong>BIT detection &amp; isolation verified</strong><span>Created a separate BIT verification plan and evaluated implemented diagnostic behavior using injected hardware failures without pilot involvement.</span></div></div></section>
+<section class="results"><h3>◎ &nbsp; RESULT</h3><div class="resgrid"><div class="res"><strong>FMET</strong><span>Developed structured failure mode procedure and evaluated effects on flying qualities by introducing hardware faults while pilot flew simulator connected to flight control system and iron bird.</span></div><div class="res"><strong>BIT detection &amp; isolation verified</strong><span>Created a separate BIT verification plan and evaluated implemented diagnostic behavior using injected hardware failures without pilot involvement.</span></div></div></section>
 <div class="footer">Failure behavior and Built-In Test performance verified in an integrated flight-control test environment.</div>
 </main>
 <footer class="site-footer"><div class="foot-inner"><div><strong>Paul Snyder — Engineering Portfolio</strong><div class="small">Bellevue, Washington • paulcollector@gmail.com</div></div><div class="project-nav"><a href="fck1.html">Previous: F-CK-1 BIT</a><a href="index.html#projects">All Projects</a><a href="boeing.html">Next: Boeing 777-300 CMCS</a></div></div></footer>
