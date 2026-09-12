@@ -1,0 +1,289 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>F-CK-1 BIT Portfolio Preview</title><style>:root {
+  --navy: #102941;
+  --navy-2: #173a58;
+  --blue: #2f75b5;
+  --blue-soft: #e8f2fa;
+  --ink: #172533;
+  --muted: #5d6b78;
+  --line: #d9e2e9;
+  --paper: #ffffff;
+  --wash: #f5f8fa;
+  --green: #e7f5ec;
+  --amber: #fff3dd;
+  --red: #a5382f;
+  --radius: 18px;
+  --shadow: 0 18px 50px rgba(17, 41, 65, .10);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--paper); line-height: 1.55; }
+a { color: inherit; }
+img { display:block; max-width:100%; }
+.shell { width:min(1180px, calc(100% - 40px)); margin-inline:auto; }
+.site-header { position:sticky; top:0; z-index:10; background:rgba(16,41,65,.96); color:white; backdrop-filter: blur(8px); }
+.nav-wrap { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+.brand { text-decoration:none; display:flex; flex-direction:column; }
+.brand strong { font-size:1.15rem; letter-spacing:.01em; }
+.brand span { color:#c8d5df; font-size:.78rem; }
+nav { display:flex; gap:22px; }
+nav a { color:#d8e3eb; text-decoration:none; font-size:.92rem; }
+nav a:hover { color:white; }
+.site-footer { padding:28px 0; background:#0c2236; color:#bac8d3; font-size:.85rem; }
+.eyebrow { margin:0 0 10px; color:var(--blue); font-weight:800; letter-spacing:.1em; font-size:.74rem; }
+h1,h2,h3 { line-height:1.06; margin-top:0; color:var(--navy); }
+h1 { font-size:clamp(2.35rem, 5vw, 4.8rem); letter-spacing:-.045em; margin-bottom:20px; }
+h2 { font-size:clamp(1.8rem, 3vw, 2.75rem); letter-spacing:-.03em; margin-bottom:14px; }
+h3 { font-size:1.35rem; }
+p { margin-top:0; }
+.lede { font-size:1.24rem; color:#33485a; max-width:780px; }
+.lede.small { font-size:1.08rem; }
+.subhead { font-weight:650; color:#506a80; }
+.section { padding:78px 0; }
+.section-tint { padding:78px 0; background:var(--wash); border-block:1px solid #e6edf2; }
+.section-dark { padding:78px 0; background:linear-gradient(135deg,#102941,#173a58); color:white; }
+.section-heading { margin-bottom:34px; }
+.section-heading.narrow { max-width:820px; }
+.section-heading.light h2, .section-heading.light p:not(.eyebrow) { color:white; }
+.landing-hero { background:linear-gradient(140deg,#eff5f9 0%, #ffffff 65%); padding:96px 0 72px; border-bottom:1px solid var(--line); }
+.landing-grid { display:grid; grid-template-columns:1.45fr .55fr; gap:70px; align-items:center; }
+.hero-pill-stack { display:flex; flex-direction:column; gap:10px; }
+.hero-pill-stack span { background:white; border:1px solid var(--line); border-radius:999px; padding:12px 16px; box-shadow:0 6px 22px rgba(17,41,65,.06); }
+.project-card { display:grid; grid-template-columns:.9fr 1.1fr; border:1px solid var(--line); border-radius:22px; overflow:hidden; text-decoration:none; box-shadow:var(--shadow); background:white; }
+.project-card img { width:100%; height:100%; min-height:430px; object-fit:cover; object-position:center 38%; }
+.project-card-body { padding:38px; }
+.tag { display:inline-block; background:var(--blue-soft); color:#1e5c91; border-radius:999px; padding:6px 10px; font-weight:700; font-size:.76rem; margin-bottom:18px; }
+.text-link { color:var(--blue); font-weight:800; }
+.coming-grid { margin-top:28px; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.coming-card { border:1px solid var(--line); padding:24px; border-radius:16px; background:#fbfcfd; }
+.coming-card span { color:var(--blue); text-transform:uppercase; letter-spacing:.1em; font-size:.72rem; font-weight:800; }
+.project-hero { background:linear-gradient(115deg,#eef4f8,#fff 65%); padding:58px 0 52px; border-bottom:1px solid var(--line); }
+.project-hero-grid { display:grid; grid-template-columns:minmax(320px,.8fr) minmax(0,1.2fr); gap:50px; align-items:start; }
+.hero-photo { margin:0; }
+.hero-photo img { width:100%; max-height:660px; object-fit:cover; object-position:center 42%; border-radius:16px; box-shadow:var(--shadow); }
+.hero-photo figcaption { color:var(--muted); font-size:.78rem; font-style:italic; margin-top:9px; }
+.project-intro h1 { font-size:clamp(2.55rem,4.6vw,4.55rem); }
+.metric-row { display:grid; grid-template-columns:repeat(3,1fr); margin-top:30px; background:#edf5fb; border:1px solid #dbeaf5; border-radius:14px; overflow:hidden; }
+.metric-row div { padding:18px; display:flex; flex-direction:column; gap:3px; border-right:1px solid #d5e5f1; }
+.metric-row div:last-child { border-right:none; }
+.metric-row strong { color:#184e7b; font-size:1.08rem; }
+.metric-row span { color:#496476; font-size:.78rem; }
+.metric-row.compact { margin-block:24px; }
+.diagram-card { border:1px solid var(--line); border-radius:var(--radius); padding:34px; background:white; box-shadow:0 10px 35px rgba(17,41,65,.06); }
+.signal-chain { display:flex; align-items:center; justify-content:center; gap:14px; }
+.node { min-width:150px; border:1px solid #b8c8d4; border-radius:12px; padding:16px; text-align:center; background:#f8fafb; display:flex; flex-direction:column; gap:5px; }
+.node span { font-size:.72rem; color:var(--muted); }
+.node small { font-size:.72rem; color:#425767; }
+.node.blue { background:#e5f1fb; border-color:#9fc2df; }
+.node.green { background:var(--green); border-color:#9bc7a9; }
+.node.amber { background:var(--amber); border-color:#e1bd76; }
+.arrow { color:#59758c; font-size:1.6rem; }
+.digital-system { flex:1; border:1px dashed #7fa8c8; background:#f3f9fd; border-radius:14px; padding:12px; }
+.digital-title { text-align:center; font-weight:800; color:#285f8d; margin-bottom:12px; }
+.digital-nodes { display:flex; align-items:center; justify-content:center; gap:10px; }
+.bit-span { margin:24px auto 6px; max-width:780px; border-top:3px solid var(--red); text-align:center; position:relative; }
+.bit-span:before,.bit-span:after { content:""; position:absolute; top:-7px; width:10px; height:10px; background:var(--red); border-radius:50%; }
+.bit-span:before { left:0; } .bit-span:after { right:0; }
+.bit-span span { display:inline-block; margin-top:8px; color:var(--red); font-weight:800; }
+.diagram-note { margin:18px 0 0; text-align:center; color:var(--muted); font-size:.78rem; }
+.two-col { display:grid; grid-template-columns:1.35fr .65fr; gap:44px; align-items:start; }
+.flow-grid { margin-top:26px; display:grid; grid-template-columns:1fr auto 1.15fr auto 1fr; gap:10px; align-items:center; }
+.flow-col { display:flex; flex-direction:column; gap:10px; }
+.flow-box { min-height:64px; display:flex; justify-content:center; align-items:center; text-align:center; border:1px solid #b9c7d2; background:white; border-radius:10px; padding:12px; font-size:.82rem; }
+.flow-box.primary { background:#dcecf9; border-color:#8db9da; flex-direction:column; }
+.flow-box.primary span { font-size:.72rem; color:#4e6678; margin-top:4px; }
+.flow-arrow { color:#6f8799; font-size:1.5rem; }
+.contribution-card { background:var(--navy); color:white; border-radius:16px; padding:28px; box-shadow:var(--shadow); }
+.contribution-card .eyebrow { color:#8ec6ee; }
+.contribution-card ul { margin:0; padding-left:20px; }
+.contribution-card li { margin:0 0 12px; }
+.before-after { display:grid; grid-template-columns:1fr auto 1fr; gap:20px; align-items:stretch; }
+.comparison-card { border-radius:16px; padding:28px; border:1px solid var(--line); position:relative; }
+.comparison-card.problem { background:#fff4f2; border-color:#f0ccc6; }
+.comparison-card.solution { background:#eef8f1; border-color:#bcdac4; }
+.comparison-label { text-transform:uppercase; font-size:.73rem; font-weight:800; letter-spacing:.09em; color:var(--muted); }
+.mini-chain { display:flex; align-items:center; justify-content:center; gap:10px; margin:28px 0 18px; }
+.mini-chain b { border:1px solid #9caebb; border-radius:8px; padding:11px; background:white; font-size:.8rem; text-align:center; }
+.gap-mark { margin:0 auto 16px; width:46px; height:46px; display:grid; place-items:center; border-radius:50%; background:#f7d9d4; color:#a33d34; font-size:1.5rem; font-weight:900; }
+.gap-mark.good { background:#d4efda; color:#2c7a44; }
+.big-arrow { font-size:2.2rem; color:#8296a5; display:grid; place-items:center; }
+.timeline { display:grid; grid-template-columns:repeat(7,1fr); gap:12px; }
+.timeline div { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); padding:18px; border-radius:14px; min-height:170px; }
+.timeline span { display:inline-grid; place-items:center; width:34px; height:34px; border-radius:50%; background:#3f86c0; font-weight:800; margin-bottom:18px; }
+.timeline strong { display:block; color:white; line-height:1.2; margin-bottom:10px; }
+.timeline small { color:#c6d4df; }
+.result-band { padding:64px 0; background:#eaf2f8; border-top:1px solid #d5e1ea; }
+.result-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0; border-block:1px solid #cbdbe6; }
+.result-grid div { padding:24px 28px; border-right:1px solid #cbdbe6; display:flex; flex-direction:column; gap:7px; }
+.result-grid div:last-child { border-right:none; }
+.result-grid strong { font-size:1.5rem; line-height:1.1; color:var(--navy); }
+.result-grid span { color:#42596a; }
+.disclaimer { margin:26px 0 0; color:#687987; font-size:.78rem; max-width:900px; }
+@media (max-width: 900px) {
+  .landing-grid,.project-card,.project-hero-grid,.two-col { grid-template-columns:1fr; }
+  .coming-grid,.timeline { grid-template-columns:1fr 1fr; }
+  .signal-chain { flex-direction:column; }
+  .digital-system { width:100%; }
+  .flow-grid { grid-template-columns:1fr; }
+  .flow-arrow { transform:rotate(90deg); text-align:center; }
+  .before-after { grid-template-columns:1fr; }
+  .big-arrow { transform:rotate(90deg); }
+  .metric-row,.result-grid { grid-template-columns:1fr; }
+  .metric-row div,.result-grid div { border-right:none; border-bottom:1px solid #d5e5f1; }
+  .metric-row div:last-child,.result-grid div:last-child { border-bottom:none; }
+}
+@media (max-width: 620px) {
+  .shell { width:min(100% - 24px, 1180px); }
+  .nav-wrap { align-items:flex-start; padding:14px 0; }
+  nav { gap:12px; font-size:.8rem; }
+  .brand span { display:none; }
+  .section,.section-tint,.section-dark { padding:54px 0; }
+  .landing-hero { padding:70px 0 48px; }
+  .coming-grid,.timeline { grid-template-columns:1fr; }
+  .digital-nodes { flex-direction:column; }
+  .digital-nodes .arrow { transform:rotate(90deg); }
+  .project-card img { min-height:300px; }
+}
+</style></head><body>
+<header class="site-header"><div class="shell nav-wrap"><a class="brand" href="#"><strong>Paul Snyder</strong><span>Systems Architecture · Embedded Systems · Aerospace</span></a><nav><a href="#">Home</a><a href="#">Projects</a><a href="mailto:paulcollector@gmail.com">Contact</a></nav></div></header>
+<main><section class="project-hero">
+    <div class="shell project-hero-grid">
+      <figure class="hero-photo">
+        <img src="public/images/fck1-museum-paul.jpg" alt="Paul Snyder beside F-CK-1 prototype aircraft number 4 at the Taiwan Air Force Museum in Kaohsiung" />
+        <figcaption>F-CK-1 prototype aircraft No. 4 · Taiwan Air Force Museum, Kaohsiung · 2025</figcaption>
+      </figure>
+      <div class="project-intro">
+        <p class="eyebrow">AEROSPACE SYSTEMS ENGINEERING · 1987–1991</p>
+        <h1>F-CK-1 Flight-Control Built-In Test Architecture</h1>
+        <p class="subhead">System Testability · Fault Detection · Embedded Software · Aircraft Integration</p>
+        <p class="lede small">Developed the architecture and detailed software requirements for a high-coverage preflight Built-In Test (BIT) of the digital flight-control system. Performed end-to-end testability and tolerance analysis from processor and memory functions through LRU interfaces, aircraft sensors, and actuators.</p>
+        <p>Identified fault-detection coverage gaps that drove new hardware stimulus requirements to equipment vendors; adapted and optimized Lockheed’s BIT interpreter for F-CK-1 needs; and developed a software model of the Analog Independent Backup Unit to accelerate test-case development.</p>
+        <div class="metric-row">
+          <div><strong>&lt; 60 sec</strong><span>preflight execution</span></div>
+          <div><strong>High coverage</strong><span>end-to-end testability</span></div>
+          <div><strong>Flight ready</strong><span>defects detected before flight</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell">
+    <div class="section-heading narrow">
+      <p class="eyebrow">1 · SYSTEM-LEVEL VIEW</p>
+      <h2>Testability across the complete flight-control signal path</h2>
+      <p>The objective was not merely to test processor software. The preflight BIT had to exercise and evaluate the flight-control system from digital processing outward through interfaces, sensors, and actuation.</p>
+    </div>
+
+    <div class="diagram-card">
+      <div class="signal-chain">
+        <div class="node green"><span>Aircraft inputs</span><strong>Sensors</strong><small>air data · attitude · rates · position</small></div>
+        <div class="arrow">→</div>
+        <div class="digital-system">
+          <div class="digital-title">Digital Flight-Control System</div>
+          <div class="digital-nodes">
+            <div class="node blue"><strong>Input interfaces</strong></div>
+            <div class="arrow">→</div>
+            <div class="node blue"><strong>CPU &amp; memory</strong></div>
+            <div class="arrow">→</div>
+            <div class="node blue"><strong>Output interfaces</strong></div>
+          </div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="node amber"><span>Aircraft outputs</span><strong>Actuators</strong><small>control surfaces · servo valves · feedback</small></div>
+      </div>
+      <div class="bit-span"><span>Built-In Test spans and evaluates the end-to-end path</span></div>
+      <p class="diagram-note">Conceptual diagram redrawn for this portfolio; it intentionally omits proprietary design details.</p>
+    </div>
+  </section>
+
+  <section class="section section-tint">
+    <div class="shell two-col">
+      <div>
+        <p class="eyebrow">2 · BIT FUNCTIONAL ARCHITECTURE</p>
+        <h2>Architecture for fast, repeatable diagnostic execution</h2>
+        <p>Defined the overall test methodology and authored more than half of the detailed BIT software requirements. The implementation used a table-driven interpreter originally developed by Lockheed and evolved for F-CK-1 program needs.</p>
+        <div class="flow-grid">
+          <div class="flow-col">
+            <div class="flow-box">Test sequence definitions</div>
+            <div class="flow-box">Stimulus commands</div>
+            <div class="flow-box">Expected responses &amp; tolerances</div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-col center">
+            <div class="flow-box primary"><strong>BIT Interpreter</strong><span>table-driven diagnostic execution</span></div>
+            <div class="flow-box primary"><strong>Analog Backup Model</strong><span>software model for test-case development</span></div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-col">
+            <div class="flow-box">Response acquisition</div>
+            <div class="flow-box">Tolerance evaluation</div>
+            <div class="flow-box">Fault detection / isolation</div>
+          </div>
+        </div>
+      </div>
+      <aside class="contribution-card">
+        <p class="eyebrow">MY CONTRIBUTION</p>
+        <ul>
+          <li>Defined the overall preflight BIT methodology and architecture.</li>
+          <li>Authored &gt;50% of the detailed BIT software requirements.</li>
+          <li>Performed end-to-end testability and tolerance analysis.</li>
+          <li>Evolved the table-driven BIT interpreter for F-CK-1 needs.</li>
+          <li>Developed a software model of the Analog Independent Backup Unit.</li>
+          <li>Led a six-engineer development team and supported aircraft integration through first flight.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section shell">
+    <div class="section-heading narrow">
+      <p class="eyebrow">3 · ARCHITECTURE FINDING</p>
+      <h2>Coverage analysis drove changes outside the software</h2>
+      <p>The end-to-end analysis exposed actuator-related failure modes that the original architecture could not adequately stimulate or detect. Closing the gap required new vendor hardware capability—not simply more software.</p>
+    </div>
+    <div class="before-after">
+      <article class="comparison-card problem">
+        <span class="comparison-label">Detection gap</span>
+        <div class="mini-chain"><b>CPU command</b><span>→</span><b>Input signals</b><span>→</span><b>Detected signal</b></div>
+        <div class="gap-mark">✕</div>
+        <p>Certain input signal paths could not be adequately exercised and observed by the existing BIT stim paths.</p>
+      </article>
+      <div class="big-arrow">→</div>
+      <article class="comparison-card solution">
+        <span class="comparison-label">Architecture improvement</span>
+        <div class="mini-chain"><b>BIT stimulus</b><span>→</span><b>Actuator</b><span>→</span><b>Observed response</b></div>
+        <div class="gap-mark good">✓</div>
+        <p>Additional hardware stimulus requirements were defined for the equipment vendor, enabling detection of previously uncovered fault conditions.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="shell">
+      <div class="section-heading light narrow">
+        <p class="eyebrow">4 · DEVELOPMENT TO FLIGHT</p>
+        <h2>Followed the design from architecture through aircraft integration</h2>
+      </div>
+      <div class="timeline">
+        <div><span>01</span><strong>Test methodology architecture</strong><small>Define objectives, coverage strategy, and execution concept</small></div>
+        <div><span>02</span><strong>Detailed software requirements</strong><small>Author majority of BIT requirements and tolerance behavior</small></div>
+        <div><span>03</span><strong>System analysis &amp; modeling</strong><small>End-to-end testability/tolerance analysis and backup-unit model</small></div>
+        <div><span>04</span><strong>Implementation</strong><small>Adapt and optimize table-driven BIT interpreter</small></div>
+        <div><span>05</span><strong>Laboratory integration</strong><small>Exercise BIT against flight-control hardware and test equipment</small></div>
+        <div><span>06</span><strong>Aircraft integration</strong><small>Integrate and resolve issues in Taiwan</small></div>
+        <div><span>07</span><strong>First flight</strong><small>BIT operational for the flight-test program</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="result-band">
+    <div class="shell">
+      <p class="eyebrow">RESULT</p>
+      <div class="result-grid">
+        <div><strong>&lt; 60 seconds</strong><span>High-coverage preflight BIT execution</span></div>
+        <div><strong>System-level coverage</strong><span>Processor and memory through LRU interfaces, sensors, and actuators</span></div>
+        <div><strong>Defects caught before flight</strong><span>Manufacturing and integration defects were detected before they could become flight-critical failures</span></div>
+      </div>
+      <p class="disclaimer">This portfolio description and all diagrams are intentionally high-level and recreated from memory. No proprietary, classified, or export-controlled design data is reproduced.</p>
+    </div>
+  </section></main><footer class="site-footer"><div class="shell">Paul Snyder · Bellevue, Washington · Engineering portfolio</div></footer></body></html>
