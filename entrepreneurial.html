@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Paul Snyder | Entrepreneurial Projects</title>
+<meta name="description" content="Paul Snyder entrepreneurial engineering projects, 2013-2026: embedded control, precision measurement, consumer product design, lighting, sensing, software product development, and system integration.">
+<style>
+:root{
+  --navy:#102b43;--navy2:#183d5d;--blue:#2b73b9;--ink:#173149;--muted:#667f97;
+  --line:#d8e2eb;--bg:#f5f8fb;--light:#edf5fc;--green:#e9f7ee;--greenb:#63b87a;
+  --amber:#fff5df;--amberb:#dca449;--red:#fff0ee;--redb:#d96e63;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:#1e2d3b;background:#fff;line-height:1.42}
+a{color:inherit;text-decoration:none}
+.top{background:linear-gradient(90deg,#102b43,#173a58);color:#fff;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:sticky;top:0;z-index:20;box-shadow:0 2px 8px rgba(8,27,43,.16)}
+.brand strong{display:block;font-size:20px;line-height:1.05}.brand span{font-size:11px;opacity:.95}
+nav{display:flex;gap:28px;font-size:13px}nav a{opacity:.82;padding:7px 0}nav a:hover,nav a.active{opacity:1;border-bottom:2px solid #56b4e9}
+.wrap{max-width:1120px;margin:auto;padding:0 18px}
+.hero{background:linear-gradient(135deg,#f3f8fc,#fff 62%);border-bottom:1px solid var(--line)}
+.hero-inner{max-width:1120px;margin:auto;padding:44px 18px 34px;display:grid;grid-template-columns:1.2fr .8fr;gap:42px;align-items:center}
+.eyebrow{color:#6484a4;text-transform:uppercase;letter-spacing:.08em;font-size:12px;font-weight:800}
+h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margin:8px 0 12px}
+.lead{font-size:16px;color:#40586e;margin:0;max-width:700px}
+.phase{display:inline-block;margin-top:14px;padding:7px 11px;border:1px solid #c8dceb;border-radius:999px;background:#edf5fc;color:#2b597e;font-size:12px;font-weight:800}
+.hero-graphic{background:linear-gradient(145deg,#102b43,#245678);border-radius:10px;padding:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;box-shadow:0 15px 35px rgba(16,43,67,.18)}
+.hero-tile{aspect-ratio:1.15;border:1px solid rgba(255,255,255,.28);border-radius:7px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;text-align:center;color:#e3eef7;font-size:10px;font-weight:800;padding:8px}
+.hero-tile:nth-child(1){background:rgba(87,174,228,.16)}.hero-tile:nth-child(2){background:rgba(120,200,148,.13)}.hero-tile:nth-child(3){background:rgba(241,191,85,.13)}
+.hero-tile:nth-child(4){background:rgba(215,125,106,.12)}.hero-tile:nth-child(5){background:rgba(161,136,224,.12)}.hero-tile:nth-child(6){background:rgba(255,255,255,.05)}
+.intro{padding:30px 0 12px}.intro h2{margin:0;color:var(--navy);font-size:25px}.intro p{color:#566e83;font-size:13px;max-width:830px;margin:7px 0 0}
+.venture-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:18px 0 42px}
+.venture{
+  border:1px solid var(--line);border-radius:9px;background:#fff;overflow:hidden;box-shadow:0 7px 18px rgba(20,52,80,.07);
+  transition:box-shadow .25s ease,border-color .25s ease,transform .25s ease;
+}
+.venture:hover{box-shadow:0 13px 28px rgba(20,52,80,.12);transform:translateY(-2px)}
+.venture.active{grid-column:1/-1;border-color:#9bc5e8;box-shadow:0 16px 36px rgba(20,52,80,.14);transform:none}
+.venture-head{width:100%;border:0;background:#fff;text-align:left;cursor:pointer;padding:0;display:block;color:inherit;font:inherit}
+.venture-visual{height:126px;position:relative;overflow:hidden;padding:16px;color:#fff;display:flex;flex-direction:column;justify-content:space-between}
+.v1{background:linear-gradient(145deg,#402a1f,#9a5f32)} .v2{background:linear-gradient(145deg,#173d59,#2678a7)}
+.v3{background:linear-gradient(145deg,#284e40,#4c9475)} .v4{background:linear-gradient(145deg,#493e16,#b39427)}
+.v5{background:linear-gradient(145deg,#4a364a,#8c688f)} .v6{background:linear-gradient(145deg,#263849,#52718a)}
+.vcat{font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.78);font-weight:800}
+.vname{font-size:20px;line-height:1.02;font-weight:850;max-width:90%}
+.vnum{position:absolute;right:14px;top:12px;font-size:36px;font-weight:900;color:rgba(255,255,255,.16)}
+.venture-copy{padding:14px 15px 16px;min-height:124px}
+.venture-copy h3{font-size:17px;color:var(--navy);margin:0 0 5px;line-height:1.1}
+.venture-copy p{font-size:11.5px;color:#556d82;margin:0}
+.openhint{display:block;margin-top:10px;font-size:10px;color:#2772a8;font-weight:800}
+.venture.active .openhint:after{content:" — details open"}.openhint:after{content:" — click to expand"}
+.venture-details{
+  max-height:0;opacity:0;overflow:hidden;padding:0 16px;background:#f8fbfe;border-top:0 solid var(--line);
+  transition:max-height .42s ease,opacity .26s ease,padding .35s ease,border-top-width .2s ease;
+}
+.venture.active .venture-details{max-height:860px;opacity:1;padding:16px;border-top-width:1px}
+.detail-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.mini-pane{border:1px solid #cfdeea;background:#fff;border-radius:7px;padding:12px;min-height:128px}
+.mini-pane .label{font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#6c88a1;font-weight:850;margin-bottom:5px}
+.mini-pane strong{display:block;color:#17466d;font-size:13px;margin-bottom:5px}
+.mini-pane p{font-size:10.5px;color:#50687d;margin:0;line-height:1.4}
+.site-footer{background:#0d2236;color:#d6e2ec;padding:24px 28px;margin-top:0}.foot-inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.project-nav{display:flex;gap:10px;flex-wrap:wrap}.site-footer a{border:1px solid rgba(255,255,255,.24);padding:8px 12px;border-radius:4px;font-size:12px}.site-footer a:hover{background:rgba(255,255,255,.08)}.small{font-size:11px;color:#9fb1c0}
+@media(max-width:900px){.venture-grid{grid-template-columns:repeat(2,1fr)}.detail-grid{grid-template-columns:1fr 1fr}.hero-inner{grid-template-columns:1fr}}
+@media(max-width:620px){
+  .top{position:static;align-items:flex-start}.brand span{display:none}nav{gap:12px;flex-wrap:wrap;justify-content:flex-end}
+  h1{font-size:34px}.venture-grid{grid-template-columns:1fr}.detail-grid{grid-template-columns:1fr}
+  .hero-graphic{grid-template-columns:repeat(2,1fr)}.site-footer .foot-inner{align-items:flex-start;flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><strong>Paul Snyder</strong><span>Systems Engineering&nbsp; • &nbsp;Embedded Systems&nbsp; • &nbsp;Aerospace&nbsp; • &nbsp;Real-World Solutions</span></div>
+  <nav><a href="index.html">Home</a><a class="active" href="index.html#projects">Projects</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Independent Engineering / Product Development</div>
+      <h1>Entrepreneurial Projects</h1>
+      <p class="lead">Six independent product-development efforts demonstrating system thinking beyond aerospace: problem discovery, product architecture, embedded implementation, mechanical/electrical design, customer validation, prototyping, and commercialization.</p>
+      <span class="phase">2013–2026</span>
+    </div>
+    <div class="hero-graphic" aria-label="Six-project overview graphic">
+      <div class="hero-tile">BBQ Bot</div><div class="hero-tile">Swingweight Meter</div><div class="hero-tile">WashAlert</div>
+      <div class="hero-tile">LED Deck Art</div><div class="hero-tile">Bathroom Luminaire</div><div class="hero-tile">ChatSweep</div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+<section class="intro">
+  <div class="eyebrow">Six Compact Case Studies</div>
+  <h2>Click any project to expand it</h2>
+  <p>The selected project moves to the top and opens four compact detail panes. The other project tiles slide down, keeping the collection compact while still showing problem definition, system-level thinking, implementation, and evidence for each venture.</p>
+</section>
+
+<section class="venture-grid" id="ventureGrid">
+
+<article class="venture active" data-project="bbq">
+  <button class="venture-head" type="button">
+    <div class="venture-visual v1"><span class="vcat">Embedded Electromechanical Control</span><div class="vname">BBQ Bot</div><div class="vnum">01</div></div>
+    <div class="venture-copy"><h3>Automated Cooking-System Control</h3><p>Consumer-scale electromechanical controller developed from trade studies and functional architecture through embedded control, electronics, mechanism design, integration, and measured test.</p><span class="openhint">Project details</span></div>
+  </button>
+  <div class="venture-details">
+    <div class="detail-grid">
+      <div class="mini-pane"><div class="label">Problem / Product Goal</div><strong>Automate a physical cooking process</strong><p>Develop a self-contained controller that senses plant temperature and automatically positions a physical mechanism rather than depending on repeated manual adjustment.</p></div>
+      <div class="mini-pane"><div class="label">System Architecture</div><strong>Sensor → control law → motor drive</strong><p>Functional architecture partitions temperature sensing, controller logic, motor-position feedback, PWM motor drive, mechanical actuation, and operator interaction.</p></div>
+      <div class="mini-pane"><div class="label">Detailed Engineering</div><strong>STM32 + embedded C + PI control</strong><p>Designed electronics and PI control laws for a brushed DC motor using PWM, feedback loops on motor position and plant temperature, plus custom mechanical drive components.</p></div>
+      <div class="mini-pane"><div class="label">Integration / Evidence</div><strong>Prototype, instrumentation, measured response</strong><p>Development progressed through bench electronics, control-law tuning, mechanical integration, oscilloscope/test instrumentation, and integrated operation with measured temperature response.</p></div>
+    </div>
+  </div>
+</article>
+
+<article class="venture" data-project="swing">
+  <button class="venture-head" type="button">
+    <div class="venture-visual v2"><span class="vcat">Precision Measurement Instrument</span><div class="vname">Tennis Swingweight Meter</div><div class="vnum">02</div></div>
+    <div class="venture-copy"><h3>Portable Racket Inertia Measurement</h3><p>Portable, dedicated instrument using inertial sensing and pendulum-period measurement to determine tennis-racket swingweight without requiring a smartphone.</p><span class="openhint">Project details</span></div>
+  </button>
+  <div class="venture-details">
+    <div class="detail-grid">
+      <div class="mini-pane"><div class="label">Product Goal</div><strong>Court-side swingweight measurement</strong><p>Targeted a compact standalone product around a $100 retail concept, optimized for portability, simple operation, and measurement of swingweight only.</p></div>
+      <div class="mini-pane"><div class="label">Measurement Architecture</div><strong>Gravity-restored pendulum + gyro</strong><p>Determines oscillation period from rate-gyro zero crossings, then computes swingweight using known fixture mass, pivot geometry, and racket parameters.</p></div>
+      <div class="mini-pane"><div class="label">Embedded Implementation</div><strong>High-rate IMU + local UI</strong><p>Firmware performs stillness qualification, gyro-bias handling, high-rate sampling, zero-crossing detection, period calculation, calibration storage, and local display/user input.</p></div>
+      <div class="mini-pane"><div class="label">Engineering Focus</div><strong>Accuracy, latency, repeatability</strong><p>Design work compared IMU response, sample rate, sensor lag, fixture geometry, mounting alignment, and competing spring-based measurement methods.</p></div>
+    </div>
+  </div>
+</article>
+
+<article class="venture" data-project="wash">
+  <button class="venture-head" type="button">
+    <div class="venture-visual v3"><span class="vcat">Human-Factors Product Concept</span><div class="vname">WashAlert</div><div class="vnum">03</div></div>
+    <div class="venture-copy"><h3>Laundry Completion Reminder</h3><p>Two-part physical reminder product: a washer-mounted sensor and a remote receiver designed to attract attention without requiring a phone application.</p><span class="openhint">Project details</span></div>
+  </button>
+  <div class="venture-details">
+    <div class="detail-grid">
+      <div class="mini-pane"><div class="label">User Problem</div><strong>Completed laundry gets forgotten</strong><p>The product addresses the common failure mode where the user leaves the laundry area, the cycle finishes, and clothing remains in the washer because the completion cue is no longer noticed.</p></div>
+      <div class="mini-pane"><div class="label">Product Architecture</div><strong>Machine sensor + remote receiver</strong><p>A compact sensor clips or mounts to the washer, while a separate receiver remains in the user's living area to make completion status persistent and visible.</p></div>
+      <div class="mini-pane"><div class="label">UX Strategy</div><strong>No phone app</strong><p>The design deliberately avoids accounts, phone pairing, application setup, and transient mobile notifications. The physical receiver itself carries the reminder state.</p></div>
+      <div class="mini-pane"><div class="label">Product Communication</div><strong>Simple physical story</strong><p>The concept was developed around an immediately understandable sequence: laundry is forgotten, the receiver visibly reminds the user, and recognition triggers action without another digital workflow.</p></div>
+    </div>
+  </div>
+</article>
+
+<article class="venture" data-project="deck">
+  <button class="venture-head" type="button">
+    <div class="venture-visual v4"><span class="vcat">Consumer Lighting / Industrial Design</span><div class="vname">LED Deck Art</div><div class="vnum">04</div></div>
+    <div class="venture-copy"><h3>Decorative Outdoor Lighting Product</h3><p>Part of an independent consumer-lighting venture combining product styling, mechanical definition, vendor collaboration, manufacturability, branding, and online commercialization.</p><span class="openhint">Project details</span></div>
+  </button>
+  <div class="venture-details">
+    <div class="detail-grid">
+      <div class="mini-pane"><div class="label">Product Concept</div><strong>Lighting as architectural/deck art</strong><p>Developed as one product in a line of innovative consumer lighting products intended to combine illumination with a distinctive decorative physical form.</p></div>
+      <div class="mini-pane"><div class="label">Mechanical Development</div><strong>3D product definition</strong><p>Created 3D drawings to move from concept toward manufacturable hardware and to define physical geometry for outside fabrication processes.</p></div>
+      <div class="mini-pane"><div class="label">Manufacturing / Vendors</div><strong>Laser machining + finishing</strong><p>Worked with Seattle-area laser-machining and coating specialists, iterating the product design to improve manufacturability and finish quality.</p></div>
+      <div class="mini-pane"><div class="label">Commercialization</div><strong>Brand → web → Amazon → advertising</strong><p>Created a web presence and brand, established Amazon Seller Central capability, and used Google AdWords to drive customer traffic and test market interest.</p></div>
+    </div>
+  </div>
+</article>
+
+<article class="venture" data-project="bath">
+  <button class="venture-head" type="button">
+    <div class="venture-visual v5"><span class="vcat">Consumer Lighting / Product Development</span><div class="vname">Bathroom Luminaire</div><div class="vnum">05</div></div>
+    <div class="venture-copy"><h3>Designed Consumer Lighting Fixture</h3><p>A second product from the consumer-lighting venture, developed using the same end-to-end process of physical design, supplier interaction, manufacturability refinement, and market presentation.</p><span class="openhint">Project details</span></div>
+  </button>
+  <div class="venture-details">
+    <div class="detail-grid">
+      <div class="mini-pane"><div class="label">Product Definition</div><strong>Consumer luminaire concept</strong><p>Developed as part of a broader line of innovative consumer lighting products rather than as a one-off prototype, requiring both technical definition and product presentation.</p></div>
+      <div class="mini-pane"><div class="label">Design Method</div><strong>3D geometry before fabrication</strong><p>Used 3D product drawings to establish form, dimensions, assembly intent, and the information needed to communicate with fabrication vendors.</p></div>
+      <div class="mini-pane"><div class="label">Design for Manufacture</div><strong>Supplier-driven iteration</strong><p>Worked directly with laser-machining and coating specialists to evolve the design based on practical manufacturing and finishing constraints.</p></div>
+      <div class="mini-pane"><div class="label">Go-to-Market Work</div><strong>Product, brand, channel, demand test</strong><p>Supported the lighting line with branding, web presence, Amazon Seller Central, and paid search traffic—extending engineering work into commercialization and customer acquisition.</p></div>
+    </div>
+  </div>
+</article>
+
+<article class="venture" data-project="chat">
+  <button class="venture-head" type="button">
+    <div class="venture-visual v6"><span class="vcat">Digital Product / Customer Discovery</span><div class="vname">ChatSweep</div><div class="vnum">06</div></div>
+    <div class="venture-copy"><h3>Messaging Aggregation Application</h3><p>Software-product venture built around a messaging-aggregation problem, combining concept development, customer discovery, interface experiments, MVP definition, intellectual property, and vendor evaluation.</p><span class="openhint">Project details</span></div>
+  </button>
+  <div class="venture-details">
+    <div class="detail-grid">
+      <div class="mini-pane"><div class="label">Problem / Concept</div><strong>Aggregate fragmented messaging</strong><p>Conceived an application intended to reduce the burden of managing messages across fragmented communication sources and developed an initial product mockup.</p></div>
+      <div class="mini-pane"><div class="label">Customer Discovery</div><strong>Survey the problem before building</strong><p>Ran multiple surveys to verify that the problem existed and to identify market segments showing the greatest affinity to the problem.</p></div>
+      <div class="mini-pane"><div class="label">Product / UX Validation</div><strong>A/B tests + MVP definition</strong><p>Performed A/B tests of the user interface, refined the business plan with entrepreneurial mentorship, and identified a minimum viable set of product features.</p></div>
+      <div class="mini-pane"><div class="label">Business / IP</div><strong>Provisional patent + vendor evaluation</strong><p>Filed a provisional patent, reviewed the business plan with local business leaders, and interviewed multiple software vendors as part of the build-versus-source path toward an MVP.</p></div>
+    </div>
+  </div>
+</article>
+
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="foot-inner">
+    <div><strong>Paul Snyder — Engineering Portfolio</strong><div class="small">Bellevue, Washington • paulcollector@gmail.com</div></div>
+    <div class="project-nav"><a href="boeing.html">Previous: Boeing 777-300 CMCS</a><a href="index.html#projects">All Projects</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const grid = document.getElementById('ventureGrid');
+  const cards = Array.from(grid.querySelectorAll('.venture'));
+
+  function rects(){ const m=new Map(); cards.forEach(c=>m.set(c,c.getBoundingClientRect())); return m; }
+  function animateFrom(oldRects){
+    cards.forEach(c=>{
+      const old=oldRects.get(c), now=c.getBoundingClientRect();
+      if(!old) return;
+      const dx=old.left-now.left, dy=old.top-now.top;
+      if(Math.abs(dx)>1 || Math.abs(dy)>1){
+        c.animate(
+          [{transform:`translate(${dx}px,${dy}px)`},{transform:'translate(0,0)'}],
+          {duration:420,easing:'cubic-bezier(.22,.8,.32,1)'}
+        );
+      }
+    });
+  }
+
+  cards.forEach(card=>{
+    card.querySelector('.venture-head').addEventListener('click',()=>{
+      const wasActive=card.classList.contains('active');
+      const before=rects();
+      cards.forEach(c=>c.classList.remove('active'));
+      if(!wasActive){
+        card.classList.add('active');
+        grid.insertBefore(card,grid.firstElementChild);
+      }
+      requestAnimationFrame(()=>animateFrom(before));
+      if(!wasActive){
+        setTimeout(()=>card.scrollIntoView({behavior:'smooth',block:'start'}),90);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
