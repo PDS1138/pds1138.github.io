@@ -250,18 +250,9 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
 }
 
 
-/* v27: locked 15-second BBQ Bot clip with a custom poster */
+/* v28: standalone local BBQ Bot clip; source video is not linked or embedded */
 .evidence-video{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#081b2b}
-.locked-clip .clip-player,.locked-clip iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
-.locked-clip iframe{pointer-events:none}
-.clip-poster{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#081b2b;cursor:pointer;z-index:3;overflow:hidden}
-.clip-poster img{width:100%;height:100%;object-fit:cover;display:block}
-.clip-poster::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,22,36,.02),rgba(4,22,36,.18))}
-.clip-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;padding-left:4px;background:rgba(255,255,255,.94);color:#123a57;font-size:28px;line-height:1;box-shadow:0 7px 22px rgba(0,0,0,.28)}
-.clip-length{position:absolute;right:10px;bottom:10px;z-index:4;background:rgba(5,24,38,.86);color:#fff;border-radius:5px;padding:4px 7px;font-size:10px;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
-.clip-poster:hover .clip-play{transform:translate(-50%,-50%) scale(1.06)}
-.clip-poster.hidden{display:none}
-
+.local-clip video{width:100%;height:100%;display:block;object-fit:cover;background:#081b2b}
 </style>
 </head>
 <body>
@@ -453,13 +444,15 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
         </article>
 
         <article class="evidence-card photo">
-          <div class="evidence-image evidence-video locked-clip" id="bbqClipShell">
-            <div id="bbqClipPlayer" class="clip-player" aria-hidden="true"></div>
-            <button class="clip-poster" id="bbqClipPoster" type="button" aria-label="Play 15-second BBQ Bot prototype clip">
-              <img src="bbq-full-prototype.jpg" alt="BBQ Bot full-system prototype beside the grill">
-              <span class="clip-play" aria-hidden="true">▶</span>
-              <span class="clip-length">15 sec</span>
-            </button>
+          <div class="evidence-image evidence-video local-clip">
+            <video controls muted playsinline preload="metadata"
+                   poster="bbq-full-prototype-poster.jpg"
+                   controlsList="nodownload noremoteplayback"
+                   disablePictureInPicture
+                   aria-label="Play 12-second BBQ Bot full-system prototype clip">
+              <source src="bbq-full-prototype-clip.mp4" type="video/mp4">
+              Your browser does not support embedded MP4 video.
+            </video>
           </div>
           <div class="evidence-copy">
             <div class="evidence-step">Full-System Prototype</div>
@@ -563,56 +556,6 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
     <div class="project-nav"><a href="boeing.html">Previous: Boeing 777-300 CMCS</a><a href="index.html#projects">All Projects</a><a href="leadership.html">Next: Technical Team Leadership</a></div>
   </div>
 </footer>
-
-<script src="https://www.youtube.com/iframe_api"></script>
-<script>
-(function(){
-  const VIDEO_ID = 'Emzvjwi9A48';
-  const START_SECONDS = 1258;  // 20:58
-  const END_SECONDS = 1273;    // 21:13
-  let clipPlayer = null;
-  let playerReady = false;
-  let playRequested = false;
-  const poster = document.getElementById('bbqClipPoster');
-  const playerHost = document.getElementById('bbqClipPlayer');
-
-  function showPoster(){
-    if(poster) poster.classList.remove('hidden');
-    if(playerHost) playerHost.setAttribute('aria-hidden','true');
-  }
-  function playLockedClip(){
-    if(!clipPlayer || !playerReady){ playRequested = true; return; }
-    poster.classList.add('hidden');
-    playerHost.setAttribute('aria-hidden','false');
-    clipPlayer.loadVideoById({
-      videoId: VIDEO_ID,
-      startSeconds: START_SECONDS,
-      endSeconds: END_SECONDS
-    });
-  }
-
-  if(poster) poster.addEventListener('click', playLockedClip);
-
-  window.onYouTubeIframeAPIReady = function(){
-    const vars = {controls:0,disablekb:1,fs:0,rel:0,playsinline:1,iv_load_policy:3};
-    if(location.protocol === 'https:' || location.protocol === 'http:') vars.origin = location.origin;
-    clipPlayer = new YT.Player('bbqClipPlayer',{
-      videoId: VIDEO_ID,
-      playerVars: vars,
-      events:{
-        onReady:function(){
-          playerReady = true;
-          if(playRequested){ playRequested = false; playLockedClip(); }
-        },
-        onStateChange:function(e){
-          if(e.data === YT.PlayerState.ENDED){ showPoster(); }
-        }
-      }
-    });
-  };
-})();
-</script>
-
 <script>
 (function(){
   const buttons = Array.from(document.querySelectorAll('.project-square'));
