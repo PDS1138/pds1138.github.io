@@ -22,6 +22,45 @@
 .results{background:linear-gradient(90deg,#163c5d,#2b5574);color:#fff;padding:20px 30px 18px} .results h3{margin:0 0 18px;font-size:16px;letter-spacing:.04em} .resgrid{display:grid;grid-template-columns:1fr 1fr 1.7fr;gap:22px} .res{border-right:1px solid rgba(255,255,255,.3);padding-right:20px} .res:last-child{border-right:none} .res strong{display:block;font-size:28px;line-height:1.05;margin-bottom:6px} .res span{font-size:13px;line-height:1.25;display:block} .footer{background:#102b43;color:#cbd8e4;text-align:center;padding:12px;font-style:italic;font-size:13px}
 .site-footer{background:#0d2236;color:#d6e2ec;padding:24px 28px;margin-top:0}.site-footer .foot-inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;gap:20px;align-items:center}.site-footer .project-nav{display:flex;gap:10px;flex-wrap:wrap}.site-footer a{border:1px solid rgba(255,255,255,.24);padding:8px 12px;border-radius:4px;font-size:12px}.site-footer a:hover{background:rgba(255,255,255,.08)}.site-footer .small{font-size:11px;color:#9fb1c0}@media(max-width:700px){.site-footer .foot-inner{align-items:flex-start;flex-direction:column}}
 @media (max-width:820px){.top{position:static;align-items:flex-start} nav{gap:14px;flex-wrap:wrap;justify-content:flex-end} .hero{grid-template-columns:1fr} .photo img{height:auto;max-height:620px} .grid{grid-template-columns:1fr} .panel:nth-child(odd){border-right:none} .metrics{grid-template-columns:1fr} .metric{border-right:none;border-bottom:1px solid #c8d9e8;padding:10px} .metric:last-child{border-bottom:none} .resgrid{grid-template-columns:1fr} .res{border-right:none;border-bottom:1px solid rgba(255,255,255,.3);padding:0 0 12px}}
+
+/* v30: approved F-CK-1 preflight-test architecture diagram */
+.grid .arch-panel{
+  grid-column:1 / -1;
+  min-height:0;
+  padding:18px 18px 16px;
+  border-right:none !important;
+}
+.arch-diagram-link{
+  display:block;
+  width:100%;
+  border-radius:6px;
+  overflow:hidden;
+  background:#fff;
+}
+.arch-diagram{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.diagram-hint{
+  margin-top:5px;
+  text-align:right;
+  color:#71879a;
+  font-size:10px;
+  font-style:italic;
+}
+.grid .panel:nth-child(2){border-right:1px solid var(--line)}
+.grid .panel:nth-child(3){border-right:none}
+.grid .panel:nth-child(4){
+  grid-column:1 / -1;
+  border-right:none;
+}
+@media (max-width:820px){
+  .grid .panel:nth-child(2),
+  .grid .panel:nth-child(3),
+  .grid .panel:nth-child(4){border-right:none}
+}
+
 </style>
 </head>
 <body id="top">
@@ -39,9 +78,11 @@
   </div>
 </section>
 <section class="grid">
-  <div class="panel"><h2><span class="num">1.</span>Flight-Control System Testability Architecture</h2><div class="kicker">End-to-end analysis from computation through aircraft interfaces</div>
-    <div class="system-flow"><div class="node outer g"><b>Sensors</b><div class="mini">aircraft inputs</div></div><div class="arrow">↔</div><div class="sysbox"><div class="syslabel">Flight-Control System (Digital / Analog Hybrid)</div><div class="inner"><div class="node">Input<br>Interfaces</div><div class="node">CPU &amp;<br>Memory</div><div class="node">Data<br>Busses</div><div class="node">Output<br>Interfaces</div></div><div class="busnote">Cross-channel data links</div><div class="buslinks"><span>Channel A</span><span class="busarrow">↔</span><span>Channel B</span></div></div><div class="arrow">↔</div><div class="node outer a"><b>Actuators</b><div class="mini">aircraft outputs</div></div></div>
-    <div class="bitline"><b>Built-In Test (BIT)</b><br>Exercises and evaluates the complete testable signal and computation paths</div>
+  <div class="panel arch-panel">
+    <a class="arch-diagram-link" href="fck1-preflight-test-architecture.png" target="_blank" aria-label="Open Flight-Control System Preflight Test Architecture diagram full size">
+      <img class="arch-diagram" src="fck1-preflight-test-architecture.png" alt="Flight-Control System Preflight Test Architecture showing sensors and actuators outside the system boundary; internal Stims applied to the input signal path; input interfaces, CPU and memory, data busses, output interfaces; and triplex redundant hardware with Channels A, B, and C.">
+    </a>
+    <div class="diagram-hint">Click diagram to enlarge</div>
   </div>
   <div class="panel"><h2><span class="num">2.</span>BIT Functional Architecture</h2><div class="kicker">Diagnostic software architecture and test flow</div>
     <div class="func"><div class="stack"><div class="box">Test Cases<br>(Procedures)</div><div class="box">BIT Stimulus<br>Generation</div><div class="box">Expected Response<br>&amp; Tolerances</div></div><div class="stack"><div class="box primary">BIT Interpreter<div class="mini">Lockheed baseline evolved and optimized for F-CK-1</div></div><div class="box primary">Analog Independent Backup Unit Model<div class="mini">software model used to speed test-case development</div></div></div><div class="stack"><div class="box good">Response<br>Acquisition</div><div class="box good">Tolerance<br>Evaluation</div><div class="box good">Fault<br>Detection</div><div class="box good">Pass / Fail<br>Report</div></div></div>
