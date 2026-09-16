@@ -1,10 +1,14 @@
-Paul Snyder Portfolio v31 — Exact Diagram Update
+Paul Snyder Engineering Portfolio — complete v32 package
 
-This update preserves the current portfolio HTML and replaces only:
+Included pages:
+  index.html
+  fck1.html
+  boeing.html
+  jas39.html
+  entrepreneurial.html
+  leadership.html
+
+The F-CK-1 architecture image is the exact user-approved diagram and is included locally as:
   fck1-preflight-test-architecture.png
 
-IMPORTANT: The diagram file is copied byte-for-byte from the exact image approved in chat.
-No image generation, redrawing, resizing, recompression, or other modification was performed.
-
-Deployment:
-Overlay these files onto the existing pds1138.github.io repository. Keep all existing image/video assets that are not included in this update package.
+Existing legacy portfolio image/video assets are referenced from the current live portfolio at https://pds1138.github.io/ so this package can be previewed immediately while preserving those existing assets.
