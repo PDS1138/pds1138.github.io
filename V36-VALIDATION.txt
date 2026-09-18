@@ -1,0 +1,18 @@
+{
+  "html_files": [
+    "boeing.html",
+    "entrepreneurial.html",
+    "fck1.html",
+    "index.html",
+    "jas39.html",
+    "leadership.html"
+  ],
+  "repo_image_assets_count": 16,
+  "packaged_image_assets_count": 16,
+  "all_repo_image_assets_included": true,
+  "missing_repo_assets": [],
+  "extra_packaged_assets": [],
+  "missing_local_references": [],
+  "remote_references": [],
+  "video_expected_but_omitted": "bbq-full-prototype-clip.mp4"
+}
