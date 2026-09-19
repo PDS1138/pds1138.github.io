@@ -1,0 +1,15 @@
+Portfolio v37 validation
+
+Updated Boeing files:
+- boeing.html: SHA-256 183cc9a634e0e5173612e5a38e34ee1e4f1120b3077ab0756969dc5b0c8b4297
+- boeing-cmcs-hero.png: SHA-256 d77d2f79cbaceed27833c5da906b4431fc86d21d00d855e50b13d31eec8b51d4
+- boeing-fault-isolation.png: SHA-256 1a0f60a72b25cf36e7868a62443991a7d0356c7b4112c15d3c8cc1d2fb285271
+
+HTML pages: 6
+Remote http/https media/navigation references: 0
+
+Missing relative references:
+- entrepreneurial.html: bbq-full-prototype-clip.mp4
+
+Expected manual video file: bbq-full-prototype-clip.mp4
+Bottom Boeing navigation: Home -> index.html; Next -> jas39.html
