@@ -249,38 +249,6 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
 /* v28: standalone local BBQ Bot clip; source video is not linked or embedded */
 .evidence-video{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#081b2b}
 .local-clip video{width:100%;height:100%;display:block;object-fit:cover;background:#081b2b}
-
-/* Review: project feature images from user-supplied PDFs */
-.project-feature{
-  width:100%;
-  margin:0 0 16px;
-  padding:12px;
-  border:1px solid #cfdeea;
-  border-radius:9px;
-  background:#fff;
-  overflow:hidden;
-}
-.project-feature img{
-  display:block;
-  width:100%;
-  max-width:100%;
-  height:auto;
-  max-height:460px;
-  object-fit:contain;
-  margin:0 auto;
-}
-.project-feature .feature-caption{
-  margin-top:7px;
-  text-align:center;
-  font-size:10px;
-  color:#6a8197;
-  font-style:italic;
-}
-@media(max-width:620px){
-  .project-feature{padding:8px}
-  .project-feature img{max-height:360px}
-}
-
 </style>
 </head>
 <body>
@@ -332,7 +300,6 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
     <div class="venture-copy"><h3>Automated Cooking-System Control</h3><p>Consumer-scale electromechanical controller developed from trade studies and functional architecture through embedded control, electronics, mechanism design, integration, and measured test.</p><span class="openhint">Project details</span></div>
   </button>
   <div class="venture-details">
-    <div class="project-feature"><img src="bbqbot-project.png" alt="BBQ Bot prototype installed on a barbecue grill"><div class="feature-caption">BBQ Bot working prototype</div></div>
     <div class="detail-grid">
       <div class="mini-pane"><div class="label">Problem / Product Goal</div><strong>Automate a physical cooking process</strong><p>Develop a self-contained controller that senses plant temperature and automatically positions a physical mechanism rather than depending on repeated manual adjustment.</p></div>
       <div class="mini-pane"><div class="label">System Architecture</div><strong>Sensor → control law → motor drive</strong><p>Functional architecture partitions temperature sensing, controller logic, motor-position feedback, motor drive, mechanical actuation, and the grill as the controlled plant.</p></div>
@@ -495,7 +462,6 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
     <div class="venture-copy"><h3>Portable Racket Inertia Measurement</h3><p>Portable, dedicated instrument using inertial sensing and pendulum-period measurement to determine tennis-racket swingweight without requiring a smartphone.</p><span class="openhint">Project details</span></div>
   </button>
   <div class="venture-details">
-    <div class="project-feature"><img src="swingweight-project.png" alt="Portable tennis swingweight meter prototype"><div class="feature-caption">Portable swingweight meter prototype</div></div>
     <div class="detail-grid">
       <div class="mini-pane"><div class="label">Product Goal</div><p>Racquets are differentiated by their moments of inertia about the grip point, aka "swingweight". Commercial meters to measure this are heavy and expensive. I targeted a compact standalone swingweight around a $100 retail concept, optimized for portability and simple operation.</p></div>
       <div class="mini-pane"><div class="label">Measurement Architecture</div><strong>Gravity-restored pendulum + gyro</strong><p>Determines oscillation period from rate-gyro zero crossings, then computes swingweight using known fixture mass, pivot geometry, and racket parameters.</p></div>
@@ -511,7 +477,6 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
     <div class="venture-copy"><h3>Laundry Completion Reminder</h3><p>Two-part physical reminder product: a washer-mounted sensor and a remote receiver designed to attract attention without requiring a phone application.</p><span class="openhint">Project details</span></div>
   </button>
   <div class="venture-details">
-    <div class="project-feature"><img src="washalert-project.png" alt="WashAlert washer-mounted sensor and remote receiver"><div class="feature-caption">WashAlert sensor and remote receiver</div></div>
     <div class="detail-grid">
       <div class="mini-pane"><div class="label">User Problem</div><strong>Completed laundry gets forgotten</strong><p>The product addresses the common failure mode where the user leaves the laundry area, the cycle finishes, and clothing remains in the washer because the completion cue is no longer noticed.</p></div>
       <div class="mini-pane"><div class="label">Product Architecture</div><strong>Machine sensor + remote receiver</strong><p>A compact sensor clips or mounts to the washer, while a separate receiver remains in the user's living area to make completion status persistent and visible.</p></div>
@@ -528,7 +493,6 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
     <div class="venture-copy"><h3>Messaging Aggregation Application</h3><p>Software-product venture built around a messaging-aggregation problem, combining concept development, customer discovery, interface experiments, MVP definition, intellectual property, and vendor evaluation.</p><span class="openhint">Project details</span></div>
   </button>
   <div class="venture-details">
-    <div class="project-feature"><img src="chatsweep-project.png" alt="ChatSweep project graphic"><div class="feature-caption">ChatSweep project graphic</div></div>
     <div class="detail-grid">
       <div class="mini-pane"><div class="label">Problem / Concept</div><strong>Aggregate fragmented messaging</strong><p>Conceived an application intended to reduce the burden of managing messages across fragmented communication sources and developed an initial product mockup.</p></div>
       <div class="mini-pane"><div class="label">Customer Discovery</div><strong>Survey the problem before building</strong><p>Ran multiple surveys to verify that the problem existed and to identify market segments showing the greatest affinity to the problem.</p></div>
