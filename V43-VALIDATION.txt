@@ -1,0 +1,21 @@
+Portfolio v43 Validation Report
+
+Pages checked:
+- boeing.html
+- entrepreneurial.html
+- fck1.html
+- index.html
+- jas39.html
+- leadership.html
+
+Total local references checked: 50
+Unexpected missing local references: 0
+Intentionally omitted local references: 1
+  - entrepreneurial.html: bbq-full-prototype-clip.mp4
+Remote media references found: 0
+
+Added in v43:
+- bbqbot-project.png
+- swingweight-project.png
+- washalert-project.png
+- chatsweep-project.png
