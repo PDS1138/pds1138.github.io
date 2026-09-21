@@ -1,0 +1,41 @@
+Paul Snyder Engineering Portfolio v38 - Validation
+
+Change in v38:
+- BBQ Bot is now presented as one continuous engineering progression rather than two visually separated phases.
+- Milestones continue sequentially through 09 Model-Based Design, 10 Bench Integration, 11 Full-System Prototype, and 12 System Test & Refinement.
+- The progression summary is now placed only at the end.
+
+HTML pages: 6
+Local file references checked: 63
+Missing non-video local references: 0
+Intentional video reference(s) omitted from package: 1
+BBQ Bot step sequence: 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12
+
+All non-video local references resolve to files in the v38 folder.
+
+Video intentionally not packaged:
+- entrepreneurial.html -> bbq-full-prototype-clip.mp4
+
+SHA-256 manifest:
+7395b4e9b922307f9fe8521824d23f07b827f33780b4aafedf0a9e1d07c097b5  bbq-allocation.png
+881fe7c7f763dcb3a9beee6af19c10dc8bad4408955ad0903ed62b66cdf60ca2  bbq-bench-integration.jpg
+68299fbea605108f5b32144c73d1c62fb446893cc064faf560813bf950cb91a0  bbq-control-laws.png
+89db4213b999045c9017af31c098ede6e1ec735b4c58b67602b937540e687182  bbq-filter-model.png
+be2054e2575050cd678040db39bb59aca3cd634920461c86b8144b2969ee094f  bbq-full-prototype-poster.jpg
+f6221c1274c29730ef7af407f2b18814d93129593c2664494b16a8a25e1e88a4  bbq-full-prototype.jpg
+78fbe167e7e2b62ed18932c3838586149901fee27d376549a6f1b158f1461a8a  bbq-functional-design.png
+3879762c063ad80d4dd1d538662c9df48a48b32a0fbdbbb1e16e780761c61210  bbq-lift-geometry.png
+6f9d96afdb49a52484ce70710545c562daaa7df5de7da0e1bba12fc505b63bbf  bbq-physical-design.png
+2620722c3a6930f6e3fb638bb3a3b46e97d267cb70b80517301c1af4f31fe1b4  bbq-temperature-test.jpg
+d77d2f79cbaceed27833c5da906b4431fc86d21d00d855e50b13d31eec8b51d4  boeing-cmcs-hero.png
+1a0f60a72b25cf36e7868a62443991a7d0356c7b4112c15d3c8cc1d2fb285271  boeing-fault-isolation.png
+183cc9a634e0e5173612e5a38e34ee1e4f1120b3077ab0756969dc5b0c8b4297  boeing.html
+64f381cc6e695e1b12e6334ba6d54c1c56ca566131d65aa68bb4e7073517629b  entrepreneurial.html
+f7c0c2ad3a0eb70ea5e5377a167b1427550794bdc71392ac312e72e20416af30  fck1-hero.jpg
+2db8b86d5b7acbde8352d018670730a554718a7f8a08046e59f4d38606df11a9  fck1-preflight-test-architecture.png
+3a5a3779d8abd0fb4e45792fab6c488cbaab4378d3b01e59181d409f64adf4bd  fck1.html
+fe933869c4f1d7a4c7310d85b0d678c558900aa003b82f0b917281bd6cb52d16  index.html
+3885477bbfb4cba33d2758523c5bfff085791ce046e79b7e77a17139a1481829  jas39-iron-bird.jpg
+3885477bbfb4cba33d2758523c5bfff085791ce046e79b7e77a17139a1481829  jas39-test-facility.jpg
+af42ea1bbe3ecc342cfaa590fb339a15b5a5b31052af88bf15c253351d00ad4f  jas39.html
+aced15fbafa6b11d0f05dbd46da052036fca8caf54040728cdb6dc6f2cadaa0b  leadership.html

@@ -325,9 +325,9 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
       <div class="journey-head">
         <div>
           <div class="eyebrow2">System Thinking / Design Progression</div>
-          <h4>Eight System Engineering Milestones</h4>
+          <h4>Continuous Engineering Progression</h4>
         </div>
-        <p>A deliberately simple consumer problem was carried through the same disciplined progression used on larger engineered systems: identify the need, trade concepts, define architecture, derive requirements, allocate functions, then define the control behavior before detailed implementation.</p>
+        <p>A deliberately simple consumer problem was carried through one continuous engineering progression: identify the need, trade concepts, define architecture, derive requirements, allocate functions, define control behavior, integrate the hardware and software, and verify measured system performance.</p>
       </div>
 
       <div class="journey-flow">
@@ -414,37 +414,34 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
 
       </div>
 
-      <div class="journey-end"><strong>Need → Architecture → Requirements → Allocation → Control</strong><span>The sequence is intentionally shown as engineering evidence: the final prototype was not approached as a collection of parts, but as a system whose detailed design flowed from successively refined decisions and requirements.</span></div>
-    </section>
-
-    <section class="implementation-evidence">
-      <div class="evidence-head">
-        <div>
-          <div class="eyebrow2">Implementation / Integration / Test</div>
-          <h4>From Control Model to Working System</h4>
-        </div>
-        <p>These four images complete the systems story by showing the transition from model-based design through bench integration, full mechanical prototyping, and closed-loop system testing.</p>
-      </div>
-
-      <div class="evidence-grid">
-        <article class="evidence-card">
-          <div class="evidence-image"><a href="bbq-filter-model.png" target="_blank"><img src="bbq-filter-model.png" alt="MicroModeler filter design and coefficient selection screen"></a></div>
-          <div class="evidence-copy">
-            <div class="evidence-step">Model-Based Design</div>
-            <h5>Filter coefficients chosen with modelling tool</h5>
+        <article class="milestone">
+          <div class="milestone-copy">
+            <span class="stepnum">09</span><div class="stage">Model-Based Design</div>
+            <h5>Select filter coefficients with a modelling tool</h5>
+            <p>Used MicroModeler to define the filter response and select coefficients before implementing the filter in the embedded controller.</p>
+            <div class="decision">The detailed signal-conditioning design continued directly from the control-law definition rather than beginning a separate development phase.</div>
           </div>
+          <div class="milestone-visual"><a href="bbq-filter-model.png" target="_blank"><img src="bbq-filter-model.png" alt="MicroModeler filter design and coefficient selection screen"><span class="imgnote">Filter design model • click to enlarge</span></a></div>
         </article>
 
-        <article class="evidence-card photo">
-          <div class="evidence-image"><a href="bbq-bench-integration.jpg" target="_blank"><img src="bbq-bench-integration.jpg" alt="BBQ Bot motor and embedded controller integrated on the bench"></a></div>
-          <div class="evidence-copy">
-            <div class="evidence-step">Bench Integration</div>
-            <h5>Motor &amp; controller integrated on the bench</h5>
+        <article class="milestone">
+          <div class="milestone-copy">
+            <span class="stepnum">10</span><div class="stage">Bench Integration</div>
+            <h5>Integrate motor and embedded controller</h5>
+            <p>Integrated the motor, controller electronics, sensors, and drive functions on the bench before committing them to the complete mechanical assembly.</p>
+            <div class="decision">Bench integration provided a controlled environment for verifying the electronics and motion-control behavior before full-system assembly.</div>
           </div>
+          <div class="milestone-visual"><a href="bbq-bench-integration.jpg" target="_blank"><img src="bbq-bench-integration.jpg" alt="BBQ Bot motor and embedded controller integrated on the bench"><span class="imgnote">Bench integration • click to enlarge</span></a></div>
         </article>
 
-        <article class="evidence-card photo">
-          <div class="evidence-image evidence-video local-clip">
+        <article class="milestone">
+          <div class="milestone-copy">
+            <span class="stepnum">11</span><div class="stage">Full-System Prototype</div>
+            <h5>Integrate electronics, control, and mechanical actuation</h5>
+            <p>Combined the embedded controller, motor drive, sensing, lid-lift mechanism, and grill interface into a complete working prototype.</p>
+            <div class="decision">This step demonstrated that the earlier architecture, requirements, allocation, and control decisions could operate together as one physical system.</div>
+          </div>
+          <div class="milestone-visual evidence-video local-clip">
             <video controls muted playsinline preload="metadata"
                    poster="bbq-full-prototype-poster.jpg"
                    controlsList="nodownload noremoteplayback"
@@ -454,20 +451,21 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
               Your browser does not support embedded MP4 video.
             </video>
           </div>
-          <div class="evidence-copy">
-            <div class="evidence-step">Full-System Prototype</div>
-            <h5>Entire system prototyped, including mechanicals</h5>
-          </div>
         </article>
 
-        <article class="evidence-card photo">
-          <div class="evidence-image"><a href="bbq-temperature-test.jpg" target="_blank"><img src="bbq-temperature-test.jpg" alt="BBQ Bot temperature test graph showing controlled grill temperature"></a></div>
-          <div class="evidence-copy">
-            <div class="evidence-step">System Test &amp; Refinement</div>
-            <h5>System testing refined control laws and resulted in temperature profile controlled to within 20 degrees</h5>
+        <article class="milestone">
+          <div class="milestone-copy">
+            <span class="stepnum">12</span><div class="stage">System Test &amp; Refinement</div>
+            <h5>Measure closed-loop temperature performance</h5>
+            <p>System testing was used to refine the control laws and verify the integrated response, resulting in a grill-temperature profile controlled to within 20 degrees.</p>
+            <div class="decision">Measured system response closed the development sequence with objective performance evidence from the working prototype.</div>
           </div>
+          <div class="milestone-visual"><a href="bbq-temperature-test.jpg" target="_blank"><img src="bbq-temperature-test.jpg" alt="BBQ Bot temperature test graph showing controlled grill temperature"><span class="imgnote">Closed-loop temperature test • click to enlarge</span></a></div>
         </article>
+
       </div>
+
+      <div class="journey-end"><strong>Need → Architecture → Requirements → Allocation → Control → Integration → Test</strong><span>The BBQ Bot story is presented as one continuous engineering progression from product need through detailed implementation and measured system performance.</span></div>
     </section>
   </div>
 </article>
