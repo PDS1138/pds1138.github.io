@@ -1,0 +1,27 @@
+Paul Snyder Engineering Portfolio v42 — Validation Report
+
+HTML pages: 6
+Local references checked: 63
+Remote http/https references found: 0
+Unexpected missing local references: 0
+Intentional missing local references: 1
+
+Missing local references:
+  INTENTIONALLY OMITTED: entrepreneurial.html -> bbq-full-prototype-clip.mp4
+
+Requested-change checks:
+  PASS: Leadership title is Team Leadership
+  PASS: Leadership section heading updated
+  PASS: Leadership summary wording updated
+  PASS: Washington Prep dates updated
+  PASS: Boeing contract leadership wording updated
+  PASS: Swingweight wording updated
+  PASS: WashAlert wording updated
+  PASS: LED Deck Art removed
+  PASS: Bathroom Luminaire removed
+  PASS: Entrepreneurial page has one selector
+  PASS: Entrepreneurial hero duplicate project boxes removed
+  PASS: Main page Team Leadership separated
+  PASS: Boeing footer navigation Home + Next
+
+Note: bbq-full-prototype-clip.mp4 is intentionally omitted from this package per user request; add it to the portfolio folder to enable the local BBQ Bot video.
