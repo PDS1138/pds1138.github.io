@@ -1,0 +1,22 @@
+Portfolio v44 Validation Report
+
+HTML pages checked:
+- boeing.html
+- entrepreneurial.html
+- fck1.html
+- index.html
+- jas39.html
+- leadership.html
+
+Local references checked: 44
+Unexpected missing local references: 0
+Intentionally omitted local references: 1
+  - entrepreneurial.html: bbq-full-prototype-clip.mp4
+Remote media references found: 0
+
+Entrepreneurial selector checks:
+- Embedded hero images present: PASS
+- Expanded-project duplicate hero blocks absent: PASS
+- Hide non-selected hero images rule present: PASS
+- Selection-state JavaScript present: PASS
+- Selection-state reset present: PASS
