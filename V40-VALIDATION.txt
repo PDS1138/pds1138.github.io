@@ -1,0 +1,45 @@
+PAUL SNYDER PORTFOLIO V40 VALIDATION
+
+Requested v40 change: remove LED Deck Art and Bathroom Luminaire from the Entrepreneurial section.
+ChatSweep is renumbered from 06 to 04. The Entrepreneurial overview is now four projects.
+
+PASS — LED Deck Art removed
+PASS — Bathroom Luminaire removed
+PASS — Four-project count on home
+PASS — Four-project Entrepreneurial intro
+PASS — ChatSweep renumbered 04
+PASS — Swingweight wording preserved
+PASS — WashAlert wording preserved
+PASS — Team Leadership title preserved
+PASS — Home Team Leadership strip preserved
+PASS — Boeing requested images preserved
+
+PASS — Missing local references other than intentionally omitted video: 0
+PASS — Remote media references: 0
+EXPECTED OMITTED VIDEO — bbq-full-prototype-clip.mp4 (user will add manually)
+
+HTML pages:
+- boeing.html
+- entrepreneurial.html
+- fck1.html
+- index.html
+- jas39.html
+- leadership.html
+
+Local image/diagram/poster assets:
+- bbq-allocation.png
+- bbq-bench-integration.jpg
+- bbq-control-laws.png
+- bbq-filter-model.png
+- bbq-full-prototype-poster.jpg
+- bbq-full-prototype.jpg
+- bbq-functional-design.png
+- bbq-lift-geometry.png
+- bbq-physical-design.png
+- bbq-temperature-test.jpg
+- boeing-cmcs-hero.png
+- boeing-fault-isolation.png
+- fck1-hero.jpg
+- fck1-preflight-test-architecture.png
+- jas39-iron-bird.jpg
+- jas39-test-facility.jpg

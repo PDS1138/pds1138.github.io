@@ -25,7 +25,7 @@ nav{display:flex;gap:28px;font-size:13px}nav a{opacity:.82;padding:7px 0}nav a:h
 h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margin:8px 0 12px}
 .lead{font-size:16px;color:#40586e;margin:0;max-width:700px}
 .phase{display:inline-block;margin-top:14px;padding:7px 11px;border:1px solid #c8dceb;border-radius:999px;background:#edf5fc;color:#2b597e;font-size:12px;font-weight:800}
-.hero-graphic{background:linear-gradient(145deg,#102b43,#245678);border-radius:10px;padding:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;box-shadow:0 15px 35px rgba(16,43,67,.18)}
+.hero-graphic{background:linear-gradient(145deg,#102b43,#245678);border-radius:10px;padding:18px;display:grid;grid-template-columns:repeat(2,1fr);gap:8px;box-shadow:0 15px 35px rgba(16,43,67,.18)}
 .hero-tile{aspect-ratio:1.15;border:1px solid rgba(255,255,255,.28);border-radius:7px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;text-align:center;color:#e3eef7;font-size:10px;font-weight:800;padding:8px}
 .hero-tile:nth-child(1){background:rgba(87,174,228,.16)}.hero-tile:nth-child(2){background:rgba(120,200,148,.13)}.hero-tile:nth-child(3){background:rgba(241,191,85,.13)}
 .hero-tile:nth-child(4){background:rgba(215,125,106,.12)}.hero-tile:nth-child(5){background:rgba(161,136,224,.12)}.hero-tile:nth-child(6){background:rgba(255,255,255,.05)}
@@ -123,7 +123,7 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
 /* v22: fixed colored project selector + one expandable detail panel */
 .project-selector{
   display:grid;
-  grid-template-columns:repeat(6,1fr);
+  grid-template-columns:repeat(4,1fr);
   gap:12px;
   padding:4px 0 18px;
 }
@@ -210,7 +210,7 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
   margin:0 0 14px;
 }
 @media(max-width:980px){
-  .project-selector{grid-template-columns:repeat(3,1fr)}
+  .project-selector{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:620px){
   .project-selector{grid-template-columns:repeat(2,1fr);gap:9px}
@@ -266,21 +266,21 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
     <div>
       <div class="eyebrow">Independent Engineering / Product Development</div>
       <h1>Entrepreneurial Projects</h1>
-      <p class="lead">Six independent product-development efforts demonstrating system thinking beyond aerospace: problem discovery, product architecture, embedded implementation, mechanical/electrical design, customer validation, prototyping, and commercialization.</p>
+      <p class="lead">Four independent product-development efforts demonstrating system thinking beyond aerospace: problem discovery, product architecture, embedded implementation, human-factors design, customer validation, prototyping, and commercialization.</p>
       <span class="phase">2013–2026</span>
     </div>
-    <div class="hero-graphic" aria-label="Six-project overview graphic">
-      <div class="hero-tile">BBQ Bot</div><div class="hero-tile">Swingweight Meter</div><div class="hero-tile">WashAlert</div>
-      <div class="hero-tile">LED Deck Art</div><div class="hero-tile">Bathroom Luminaire</div><div class="hero-tile">ChatSweep</div>
+    <div class="hero-graphic" aria-label="Four-project overview graphic">
+      <div class="hero-tile">BBQ Bot</div><div class="hero-tile">Swingweight Meter</div>
+      <div class="hero-tile">WashAlert</div><div class="hero-tile">ChatSweep</div>
     </div>
   </div>
 </section>
 
 <main class="wrap">
 <section class="intro">
-  <div class="eyebrow">Six Compact Case Studies</div>
+  <div class="eyebrow">Four Compact Case Studies</div>
   <h2>Click any project to expand it</h2>
-  <p>Select one of the colored project squares below. Its case study will expand directly beneath the selector while the six project choices remain fixed in place.</p>
+  <p>Select one of the colored project squares below. Its case study will expand directly beneath the selector while the four project choices remain fixed in place.</p>
 </section>
 
 
@@ -294,14 +294,8 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
   <button class="project-square v3" type="button" data-target="wash" aria-expanded="false">
     <span class="sq-num">03</span><span class="sq-name">WashAlert</span><span class="sq-cat">Human-Factors Product Concept</span>
   </button>
-  <button class="project-square v4" type="button" data-target="deck" aria-expanded="false">
-    <span class="sq-num">04</span><span class="sq-name">LED Deck Art</span><span class="sq-cat">Consumer Lighting / Industrial Design</span>
-  </button>
-  <button class="project-square v5" type="button" data-target="bath" aria-expanded="false">
-    <span class="sq-num">05</span><span class="sq-name">Bathroom Luminaire</span><span class="sq-cat">Consumer Lighting / Product Development</span>
-  </button>
   <button class="project-square v6" type="button" data-target="chat" aria-expanded="false">
-    <span class="sq-num">06</span><span class="sq-name">ChatSweep</span><span class="sq-cat">Digital Product / Customer Discovery</span>
+    <span class="sq-num">04</span><span class="sq-name">ChatSweep</span><span class="sq-cat">Digital Product / Customer Discovery</span>
   </button>
 </section>
 
@@ -477,7 +471,7 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
   </button>
   <div class="venture-details">
     <div class="detail-grid">
-      <div class="mini-pane"><div class="label">Product Goal</div><strong>Court-side swingweight measurement</strong><p>Targeted a compact standalone product around a $100 retail concept, optimized for portability, simple operation, and measurement of swingweight only.</p></div>
+      <div class="mini-pane"><div class="label">Product Goal</div><p>Racquets are differentiated by their moments of inertia about the grip point, aka "swingweight". Commercial meters to measure this are heavy and expensive. I targeted a compact standalone swingweight around a $100 retail concept, optimized for portability and simple operation.</p></div>
       <div class="mini-pane"><div class="label">Measurement Architecture</div><strong>Gravity-restored pendulum + gyro</strong><p>Determines oscillation period from rate-gyro zero crossings, then computes swingweight using known fixture mass, pivot geometry, and racket parameters.</p></div>
       <div class="mini-pane"><div class="label">Embedded Implementation</div><strong>High-rate IMU + local UI</strong><p>Firmware performs stillness qualification, gyro-bias handling, high-rate sampling, zero-crossing detection, period calculation, calibration storage, and local display/user input.</p></div>
       <div class="mini-pane"><div class="label">Engineering Focus</div><strong>Accuracy, latency, repeatability</strong><p>Design work compared IMU response, sample rate, sensor lag, fixture geometry, mounting alignment, and competing spring-based measurement methods.</p></div>
@@ -494,45 +488,16 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
     <div class="detail-grid">
       <div class="mini-pane"><div class="label">User Problem</div><strong>Completed laundry gets forgotten</strong><p>The product addresses the common failure mode where the user leaves the laundry area, the cycle finishes, and clothing remains in the washer because the completion cue is no longer noticed.</p></div>
       <div class="mini-pane"><div class="label">Product Architecture</div><strong>Machine sensor + remote receiver</strong><p>A compact sensor clips or mounts to the washer, while a separate receiver remains in the user's living area to make completion status persistent and visible.</p></div>
-      <div class="mini-pane"><div class="label">UX Strategy</div><strong>No phone app</strong><p>The design deliberately avoids accounts, phone pairing, application setup, and transient mobile notifications. The physical receiver itself carries the reminder state.</p></div>
+      <div class="mini-pane"><strong>User Simplicity drives Architecture</strong><p>The design deliberately avoids user needing to setup accounts, do phone pairing, setup anything. The user magnetically attaches one unit on the washer and places the other unit in a living area. The software creates a private wifi network automatically between the two units and simply begins working.</p></div>
       <div class="mini-pane"><div class="label">Product Communication</div><strong>Simple physical story</strong><p>The concept was developed around an immediately understandable sequence: laundry is forgotten, the receiver visibly reminds the user, and recognition triggers action without another digital workflow.</p></div>
     </div>
   </div>
 </article>
 
-<article class="venture" data-project="deck">
-  <button class="venture-head" type="button">
-    <div class="venture-visual v4"><span class="vcat">Consumer Lighting / Industrial Design</span><div class="vname">LED Deck Art</div><div class="vnum">04</div></div>
-    <div class="venture-copy"><h3>Decorative Outdoor Lighting Product</h3><p>Part of an independent consumer-lighting venture combining product styling, mechanical definition, vendor collaboration, manufacturability, branding, and online commercialization.</p><span class="openhint">Project details</span></div>
-  </button>
-  <div class="venture-details">
-    <div class="detail-grid">
-      <div class="mini-pane"><div class="label">Product Concept</div><strong>Lighting as architectural/deck art</strong><p>Developed as one product in a line of innovative consumer lighting products intended to combine illumination with a distinctive decorative physical form.</p></div>
-      <div class="mini-pane"><div class="label">Mechanical Development</div><strong>3D product definition</strong><p>Created 3D drawings to move from concept toward manufacturable hardware and to define physical geometry for outside fabrication processes.</p></div>
-      <div class="mini-pane"><div class="label">Manufacturing / Vendors</div><strong>Laser machining + finishing</strong><p>Worked with Seattle-area laser-machining and coating specialists, iterating the product design to improve manufacturability and finish quality.</p></div>
-      <div class="mini-pane"><div class="label">Commercialization</div><strong>Brand → web → Amazon → advertising</strong><p>Created a web presence and brand, established Amazon Seller Central capability, and used Google AdWords to drive customer traffic and test market interest.</p></div>
-    </div>
-  </div>
-</article>
-
-<article class="venture" data-project="bath">
-  <button class="venture-head" type="button">
-    <div class="venture-visual v5"><span class="vcat">Consumer Lighting / Product Development</span><div class="vname">Bathroom Luminaire</div><div class="vnum">05</div></div>
-    <div class="venture-copy"><h3>Designed Consumer Lighting Fixture</h3><p>A second product from the consumer-lighting venture, developed using the same end-to-end process of physical design, supplier interaction, manufacturability refinement, and market presentation.</p><span class="openhint">Project details</span></div>
-  </button>
-  <div class="venture-details">
-    <div class="detail-grid">
-      <div class="mini-pane"><div class="label">Product Definition</div><strong>Consumer luminaire concept</strong><p>Developed as part of a broader line of innovative consumer lighting products rather than as a one-off prototype, requiring both technical definition and product presentation.</p></div>
-      <div class="mini-pane"><div class="label">Design Method</div><strong>3D geometry before fabrication</strong><p>Used 3D product drawings to establish form, dimensions, assembly intent, and the information needed to communicate with fabrication vendors.</p></div>
-      <div class="mini-pane"><div class="label">Design for Manufacture</div><strong>Supplier-driven iteration</strong><p>Worked directly with laser-machining and coating specialists to evolve the design based on practical manufacturing and finishing constraints.</p></div>
-      <div class="mini-pane"><div class="label">Go-to-Market Work</div><strong>Product, brand, channel, demand test</strong><p>Supported the lighting line with branding, web presence, Amazon Seller Central, and paid search traffic—extending engineering work into commercialization and customer acquisition.</p></div>
-    </div>
-  </div>
-</article>
 
 <article class="venture" data-project="chat">
   <button class="venture-head" type="button">
-    <div class="venture-visual v6"><span class="vcat">Digital Product / Customer Discovery</span><div class="vname">ChatSweep</div><div class="vnum">06</div></div>
+    <div class="venture-visual v6"><span class="vcat">Digital Product / Customer Discovery</span><div class="vname">ChatSweep</div><div class="vnum">04</div></div>
     <div class="venture-copy"><h3>Messaging Aggregation Application</h3><p>Software-product venture built around a messaging-aggregation problem, combining concept development, customer discovery, interface experiments, MVP definition, intellectual property, and vendor evaluation.</p><span class="openhint">Project details</span></div>
   </button>
   <div class="venture-details">
@@ -551,7 +516,7 @@ h1{font-size:42px;line-height:1.04;color:var(--navy);letter-spacing:-.03em;margi
 <footer class="site-footer">
   <div class="foot-inner">
     <div><strong>Paul Snyder — Engineering Portfolio</strong><div class="small">Bellevue, Washington • paulcollector@gmail.com</div></div>
-    <div class="project-nav"><a href="boeing.html">Previous: Boeing 777-300 CMCS</a><a href="index.html#projects">All Projects</a><a href="leadership.html">Next: Technical Team Leadership</a></div>
+    <div class="project-nav"><a href="boeing.html">Previous: Boeing 777-300 CMCS</a><a href="index.html#projects">All Projects</a><a href="leadership.html">Next: Team Leadership</a></div>
   </div>
 </footer>
 <script>
