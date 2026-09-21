@@ -1,0 +1,31 @@
+FINAL Portfolio Validation Report
+
+Final requested changes:
+- Removed "Real-World Solutions" from the header tagline throughout the portfolio.
+- Entrepreneurial project selector uses project hero images.
+- When a project is selected, the other three hero images are hidden.
+- Expanded project details do not repeat the selector hero image.
+- Added "Portability and Low-Cost" to the Swingweight Product Goal box.
+
+HTML pages checked:
+- boeing.html
+- entrepreneurial.html
+- fck1.html
+- index.html
+- jas39.html
+- leadership.html
+
+Local references checked: 44
+Unexpected missing local references: 0
+Intentionally omitted local references: 1
+  - entrepreneurial.html: bbq-full-prototype-clip.mp4
+Remote media references found: 0
+Pages still containing "Real-World Solutions": 0
+
+Entrepreneurial page checks:
+- Four embedded selector hero images: PASS
+- No repeated project hero image blocks below selector: PASS
+- Non-selected hero images hide when project is open: PASS
+- Selection state JavaScript enabled: PASS
+- Selection state reset enabled: PASS
+- "Portability and Low-Cost" title present: PASS
